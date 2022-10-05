@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adventuregame.GameController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="135.0" prefWidth="200.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="8.0" layoutY="25.0" text="Health:" />
+            <Label fx:id="PlayerHealth" layoutX="57.0" layoutY="24.0" prefHeight="17.0" prefWidth="29.0" />
+            <Label layoutX="7.0" layoutY="64.0" text="Intelligence:" />
+            <Label layoutX="8.0" layoutY="85.0" text="Dexterity:" />
+            <Label layoutX="9.0" layoutY="110.0" text="Gold:" />
+            <Label layoutX="56.0" layoutY="8.0" text="PLAYER STATS" />
+            <Label fx:id="PlayerInt" layoutX="79.0" layoutY="64.0" prefHeight="17.0" prefWidth="37.0" />
+            <Label fx:id="PlayerDex" layoutX="59.0" layoutY="85.0" prefHeight="17.0" prefWidth="37.0" />
+            <Label fx:id="PlayerGold" layoutX="40.0" layoutY="110.0" prefHeight="17.0" prefWidth="37.0" />
+            <Label layoutX="6.0" layoutY="45.0" text="Strength:" />
+            <Label fx:id="PlayerStrength" layoutX="64.0" layoutY="45.0" prefHeight="17.0" prefWidth="33.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="MonsterPane" layoutX="397.0" layoutY="10.0" prefHeight="138.0" prefWidth="196.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="53.0" layoutY="4.0" text="MONSTER STATS" />
+            <Label layoutX="7.0" layoutY="30.0" text="Health:" />
+            <Label layoutX="6.0" layoutY="68.0" text="Intelligence:" />
+            <Label layoutX="5.0" layoutY="88.0" text="Dexterity:" />
+            <Label layoutX="6.0" layoutY="48.0" text="Strength:" />
+            <Label fx:id="MonsterHealth" layoutX="56.0" layoutY="30.0" />
+            <Label fx:id="MonsterStrength" layoutX="66.0" layoutY="47.0" prefHeight="17.0" prefWidth="24.0" />
+            <Label fx:id="MonsterIntelligence" layoutX="76.0" layoutY="68.0" />
+            <Label fx:id="MonsterDex" layoutX="62.0" layoutY="88.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="RoomPane" layoutX="205.0" layoutY="169.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="84.0" layoutY="11.0" text="ROOM" />
+            <Label layoutX="9.0" layoutY="35.0" text="Location:" />
+            <Label layoutX="8.0" layoutY="66.0" text="Gold:" />
+            <Label fx:id="LocationLabel" layoutX="61.0" layoutY="35.0" />
+            <Label fx:id="GoldLabel" layoutX="47.0" layoutY="66.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="27.0" layoutY="180.0" prefHeight="200.0" prefWidth="95.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="StartGame" layoutX="5.0" layoutY="14.0" mnemonicParsing="false" onAction="#startGame" text="START GAME" />
+            <Button fx:id="FightButton" layoutX="22.0" layoutY="53.0" mnemonicParsing="false" onAction="#fightAction" text="FIGHT" />
+            <Button fx:id="RunAwayButton" layoutX="8.0" layoutY="89.0" mnemonicParsing="false" onAction="#runAwayAction" text="RUN AWAY" />
+            <Button fx:id="SearchButton" layoutX="15.0" layoutY="127.0" mnemonicParsing="false" onAction="#searchAction" text="SEARCH" />
+            <Button fx:id="SleepButton" layoutX="23.0" layoutY="164.0" mnemonicParsing="false" onAction="#sleepAction" text="SLEEP" />
+         </children>
+      </Pane>
+      <Button fx:id="LeftButton" layoutX="156.0" layoutY="260.0" mnemonicParsing="false" onAction="#moveLeft" text="&lt;--" />
+      <Button fx:id="UpBotton" layoutX="292.0" layoutY="137.0" mnemonicParsing="false" onAction="#moveUp" text="^" />
+      <Button fx:id="RightButton" layoutX="419.0" layoutY="257.0" mnemonicParsing="false" onAction="#moveRight" text="--&gt;" />
+      <Button fx:id="DownButton" layoutX="294.0" layoutY="372.0" mnemonicParsing="false" onAction="#moveDown" text="v" />
+      <Label fx:id="GameMessage" layoutX="224.0" layoutY="14.0" prefHeight="38.0" prefWidth="164.0" />
+      <Label fx:id="MonsterMessage" layoutX="222.0" layoutY="83.0" prefHeight="17.0" prefWidth="163.0" />
+   </children>
+</AnchorPane>
